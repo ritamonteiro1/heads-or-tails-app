@@ -10,7 +10,7 @@ import android.widget.ImageView;
 public class GameActivity extends AppCompatActivity {
     private ImageView gamePlayImageView;
     private ImageView gameBackImageView;
-    private final int HEADS_COIN = 0;
+    private static final int HEADS_COIN = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +20,11 @@ public class GameActivity extends AppCompatActivity {
         findIds();
 
         Bundle dice = getIntent().getExtras();
-        int randomNumber = dice.getInt("Number");
+        int randomNumber = dice.getInt(Constants.NUMBER);
 
         if (randomNumber == HEADS_COIN) {
             gamePlayImageView.setImageResource(R.drawable.moeda_cara);
-        } else { //recebe coroa
+        } else {
             gamePlayImageView.setImageResource((R.drawable.moeda_coroa));
         }
 
