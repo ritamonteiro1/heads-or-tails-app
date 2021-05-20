@@ -2,36 +2,34 @@ package com.example.caraoucoroa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class GameActivity extends AppCompatActivity {
     private ImageView gamePlayImageView;
-    private ImageView gameBackImageView;
+    private ImageButton gameBackImageButton;
     private static final int HEADS_COIN = 0;
+    private static final int DEFAULT_RANDOM_NUMBER = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        findIds();
-
-        Bundle dice = getIntent().getExtras();
-        int randomNumber = dice.getInt(Constants.NUMBER);
+        findViewsById();
+        int randomNumber = getIntent().getIntExtra(Constants.NUMBER, DEFAULT_RANDOM_NUMBER);
 
         if (randomNumber == HEADS_COIN) {
-            gamePlayImageView.setImageResource(R.drawable.moeda_cara);
+            gamePlayImageView.setImageResource(R.drawable.img_heads_coin);
         } else {
-            gamePlayImageView.setImageResource((R.drawable.moeda_coroa));
+            gamePlayImageView.setImageResource((R.drawable.img_tails_coin));
         }
-        gameBackImageView.setOnClickListener(v -> finish());
+        gameBackImageButton.setOnClickListener(v -> finish());
     }
 
-    private void findIds() {
+    private void findViewsById() {
         gamePlayImageView = findViewById(R.id.gamePlayImageView);
-        gameBackImageView = findViewById(R.id.gameBackImageView);
+        gameBackImageButton = findViewById(R.id.gameBackImageButton);
     }
 }
