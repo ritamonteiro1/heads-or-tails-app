@@ -27,7 +27,6 @@ public class GameActivity extends AppCompatActivity {
         } else {
             gamePlayImageView.setImageResource((R.drawable.moeda_coroa));
         }
-
         gameBackImageView.setOnClickListener(v -> finish());
     }
 
@@ -35,5 +34,4 @@ public class GameActivity extends AppCompatActivity {
         gamePlayImageView = findViewById(R.id.gamePlayImageView);
         gameBackImageView = findViewById(R.id.gameBackImageView);
     }
-
 }

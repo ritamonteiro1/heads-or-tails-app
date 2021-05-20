@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cara ou Coroa</string>
+    <string name="image_heads_or_tails_result">Imagem para mostrar o resultado da cara ou coroa</string>
+    <string name="image_option_return_home_screen">Opção para voltar para tela inicial</string>
+    <string name="game_image">Imagem de apresentação do jogo cara ou cara</string>
+    <string name="start_game_option">Opção para iniciar o jogo</string>
 </resources>

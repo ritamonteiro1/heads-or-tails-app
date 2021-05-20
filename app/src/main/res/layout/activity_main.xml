@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
+        android:contentDescription="@string/game_image"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
@@ -28,6 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainLogoImageView"
+        android:contentDescription="@string/start_game_option"
         app:srcCompat="@drawable/botao_jogar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
